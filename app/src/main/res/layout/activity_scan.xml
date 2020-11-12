@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:visibility="visible"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/test_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Agility"
+                    android:textSize="@dimen/small_text_size"
+                    android:textColor="#B8D3E4"
+                    />
+
+                <TextView
+                    android:id="@+id/sub_test_name_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Illinois Agility Test"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <SurfaceView
+                android:id="@+id/cameraView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10">
+
+                    <RelativeLayout
+                        android:id="@+id/layout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="190dp"
+                        android:background="#ffffff"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="20dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="20dp"
+                        android:paddingBottom="30dp">
+
+                        <LinearLayout
+                            android:id="@+id/ll1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangle">
+
+                                <Spinner
+                                    android:id="@+id/class_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="4dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangle">
+
+                                <Spinner
+                                    android:id="@+id/roll_no_spinner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="45dp" />
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/text1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/ll1"
+                            android:layout_marginTop="8dp"
+                            android:paddingLeft="10dp"
+                            android:text="@string/enter_student_registration_no" />
+
+                        <EditText
+                            android:id="@+id/code_edt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/text1"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/go_btn"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="@string/code_here"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:singleLine="true" />
+
+
+                        <TextView
+                            android:id="@+id/student_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/code_edt"
+                            android:layout_marginTop="5dp"
+                            android:paddingLeft="10dp"
+                            android:text="" />
+
+                        <Button
+                            android:id="@+id/go_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_below="@+id/text1"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/color_accent_border_button"
+                            android:stateListAnimator="@null"
+                            android:text="@string/go"
+                            android:textColor="@color/colorAccent" />
+
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginTop="40dp"
+                            android:text="@string/scan_student_qr_code"
+                            android:textColor="@color/white" />
+
+                        <ImageView
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="30dp"
+                            android:src="@drawable/qr_code_window" />
+
+
+                        <TextView
+                            android:id="@+id/change_test_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:text="@string/change_test"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorAccent" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:clickable="true"
+                    android:visibility="visible"
+                    app:backgroundTint="@color/white"
+                    app:layout_anchor="@id/layout1"
+                    app:layout_anchorGravity="bottom|center_horizontal|center"
+                    app:elevation="0dp"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="6dp"
+                    android:text="@string/or"
+                    android:textColor="#cc000000"
+                    android:textSize="15dp"
+                    app:layout_anchor="@id/layout1"
+                    app:layout_anchorGravity="bottom|center_horizontal|center"
+                    android:stateListAnimator="@null"/>
+
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+

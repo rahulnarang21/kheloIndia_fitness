@@ -1,0 +1,548 @@
+<resources>
+    <string name="app_name">खेलो इंडिया - एसेसर</string>
+    <string name="forgot_password_text">पासवर्ड रीसेट निर्देश भेजने के लिए हमें बस आपके पंजीकृत ईमेल आईडी की आवश्यकता है।</string>
+    <string name="otp_text">(अपने पंजीकृत ईमेल आईडी पर भेजे गए ओटीपी दर्ज करें)</string>
+    <string name="school_select">स्कूल का चयन करें</string>
+    <string name="test_select">टेस्ट का चयन करें</string>
+    <string name="test_status">टेस्ट स्थिति</string>
+    <string name="test_status_report">टेस्ट स्थिति रिपोर्ट</string>
+    <string name="string_agility_text">इलिनॉइस सर्किट एजिलिटी टेस्ट स्कोर दर्ज करें</string>
+    <string name="string_flexibility_text">सक्रिय सीधे पैर उठाना टेस्ट स्कोर दर्ज करें</string>
+    <string name="string_hand_eye">हाथ-आंख समन्वय टेस्ट स्कोर दर्ज करें</string>
+    <string name="username">कृपया उपयोगकर्ता नाम दर्ज करें</string>
+    <string name="password">कृप्या पास्वर्ड भरें</string>
+    <string name="exit_from_test">कृपया सुनिश्चित करें कि किसी अन्य स्क्रीन पर स्विच करने से पहले टेस्ट स्कोर सहेजा गया है। क्या आप वाकई जारी रखना चाहते हैं (बिना बचत के)?</string>
+    <string name="exit_from_app">क्या आप वाकई एसेसर-खेलो इंडिया ऐप से बाहर निकलना चाहते हैं?</string>
+    <string name="view_report_string">रिपोर्ट देखें (%s)</string>
+
+    <string name="validate_class_drop_down">कक्षा ड्रॉप डाउन चुना जाना चाहिए</string>
+
+    <string name="email_verification_symbols">^[\\w-_\\.+]*[\\w-_\\.]\\@([\\w]+\\.)+[\\w]+[\\w]$</string>
+    <string name="server_down">एप्लिकेशन अभी सर्वर से कनेक्ट नहीं हो सकता है। संभावित कारण: आपका मोबाइल डेटा बंद हो सकता है या इंटरनेट की गति धीमी हो सकती है। </string>
+    <string name="no_internet">इंटरनेट उपलब्ध नहीं है कृपया बाद में पुनः प्रयास करें</string>
+    <string name="data_save_success">डेटा सफलतापूर्वक सहेजा गया</string>
+    <string name="time_status_entry_empty">कोई प्रारंभ समय नहीं</string>
+    <string name="time_status_exit_empty">कोई अंत समय नहीं</string>
+    <string name="logout">लॉग आउट</string>
+    <string name="enable_your_internet">कृपया अपना इंटरनेट कनेक्शन सक्षम करें!</string>
+
+    <!--go daddy staging-->
+    <!--<string name="base_url">http://dart.fitness365.me/f365_wservice/service1.svc/</string>-->
+    <!--<string name="image_base_url">http://dart.fitness365.me/f365_wservice</string>-->
+
+    <!--live-->
+
+    <!--<string name="base_url">http://103.65.20.125:90/Service1.svc/</string>-->
+    <!--<string name="image_base_url">http://103.65.20.125:90/</string>-->
+
+    <!--<string name="base_url">http://103.65.20.125:92/Service1.svc/</string>-->
+    <!--<string name="image_base_url">http://103.65.20.125:92/</string>-->
+
+    <!--<string name="base_url"> http://schoolfitness.kheloindia.gov.in:8080/Service1.svc/</string>-->
+    <!--<string name="image_base_url">http://schoolfitness.kheloindia.gov.in:8080/</string>-->
+
+    <!--Current testing url-->
+
+<!--    <string name="base_url">http://103.65.20.140:89/Service1.svc/</string>-->
+<!--    <string name="image_base_url">http://103.65.20.140:89/</string>-->
+
+    <!--current live url-->
+    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>
+    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>
+
+    <!--live staging-->
+    <!--<string name="base_url">http://192.168.1.117:85/Service1.svc/</string>-->
+    <!--<string name="image_base_url">http://192.168.1.117:85/</string>-->
+
+    <string name="forgot_password_success">आपने नया पासवर्ड सफलतापूर्वक सेट कर दिया है</string>
+    <string name="select_test">टेस्ट चयन</string>
+    <string name="select_class">कक्षा का चयन करें</string>
+    <string name="all">सब</string>
+    <string name="validate_test_drop_down">टेस्ट ड्रॉप डाउन चुना जाना चाहिए</string>
+
+
+    <string name="monthTitleFont">roboto_light</string>
+     <string name="dayOfWeekFont">roboto_regular</string>
+     <string name="dayOfMonthFont">roboto_light</string>
+
+
+    <string name="title_fingerprint">One-touch Sign In</string>
+    <string name="desc_fingerprint">Please place your fingertip on the scanner to verify your identity</string>
+    <string name="note">(Fingerprint sign in makes your app login much faster. Your device should have at least one fingerprint registered in device settings)</string>
+    <string name="activity_log">गतिविधि लॉग</string>
+    <string name="my_activity_log">मेरी गतिविधि लॉग</string>
+    <string name="view_dart_board">डार्ट बोर्ड देखें</string>
+    <string name="date_choose">तारीख चुना जाना चाहिए</string>
+    <string name="month_choose">महीना चुना जाना चाहिए</string>
+    <string name="year_choose">वर्ष चुना जाना चाहिए</string>
+
+    <string name="classs">कक्षा</string>
+    <string name="lesson_plan">पाठ योजना का चयन करें</string>
+    <string name="sports_technique">खेल का चयन करें</string>
+    <string name="other">चुनें</string>
+    <string name="period">अवधि</string>
+        <string name="make_my_dart">डार्ट बनाएं</string>
+    <string name="reset_data">क्या आप वाकई सभी फ़ील्ड रीसेट करना चाहते हैं?</string>
+    <string name="please_scan">कृपया सुनिश्चित करें कि सेविंग से पहले छात्र डेटा और टेस्ट स्कोर भर चुके हैं।</string>
+    <string name="please_stop_timer">कृपया सहेजने से पहले टाइमर को बंद कर दें।</string>
+    <string name="not_for_juniors">आप जूनियर सेक्शन के लिए परीक्षा नहीं ले सकते हैं।</string>
+    <string name="validate_net_reading">अंतिम पठन प्रारंभिक पढ़ने से अधिक होना चाहिए।</string>
+
+    <string name="nill_score">—</string>
+    <string name="nill_score_excel_sheet">--</string>
+    <string name="kg">\u0020kg</string>
+    <string name="hyphon_slash_label">—/—</string>
+    <string name="csv_message_loader">डेटा निर्यात कर कृपया प्रतीक्षा करें ...</string>
+    <string name="schools_message_loader">कृपया प्रतीक्षा करें जब तक हम स्कूल के लिए नवीनतम डेटा प्राप्त करते हैं।</string>
+    <string name="tests_message_loader">टेस्ट के लिए नवीनतम डेटा लाने के दौरान कृपया प्रतीक्षा करें।</string>
+    <string name="attended_max">Attended By ⊕</string>
+    <string name="attended_min">Attended By ⊖</string>
+
+    <!--    <string name="progress_loader">Please wait while we fetch the latest data</string>-->
+    <string name="progress_loader">डेटा लोड हो रहा है कृपया प्रतीक्षा करें ...</string>
+    <string name="notification_title">ऐप अपडेट उपलब्ध है</string>
+    <string name="notification_content">कृपया नवीनतम संस्करण डाउनलोड करें</string>
+    <string name="not_for_seniors">आप वरिष्ठ अनुभाग के लिए परीक्षा नहीं ले सकते हैं।</string>
+    <string name="throw_ball">खेल- गेंद फेंको</string>
+    <string name="kabaddi">खेल- कबड्डी</string>
+    <string name="football">खेल- फुटबॉल</string>
+    <string name="kho_kho">खेल- खो खो</string>
+    <string name="hand_ball">खेल- हैंडबॉल</string>
+    <string name="cricket">खेल- क्रिकेट</string>
+    <string name="basket_ball">खेल- बास्केटबाल</string>
+    <string name="volley_ball">खेल- वॉलीबॉल</string>
+    <string name="athletics">व्यायाम</string>
+    <string name="gymnastics_aerobics">जिमनास्टिक्स / एरोबिक्स</string>
+    <string name="badminton">खेल- बैडमिंटन</string>
+    <string name="squash">खेल- स्क्वाश</string>
+    <string name="proficient">प्रवीण</string>
+    <string name="exemplary">अनुकरणीय</string>
+    <string name="learning">सीख रहा हूँ</string>
+    <string name="absent">अनुपस्थित</string>
+
+    <string name="validate_class_period_drop_down">कक्षा और अवधि ड्रॉप डाउन का चयन किया जाना चाहिए</string>
+    <string name="validate_lesson_drop_down">पाठ योजना ड्रॉप डाउन किया जाना चाहिए</string>
+    <string name="validate_sports_drop_down">खेल ड्रॉप डाउन चुना जाना चाहिए</string>
+    <string name="validate_other_drop_down">अन्य ड्रॉप डाउन चुना जाना चाहिए</string>
+    <string name="validate_remarks">कृपया टिप्पणियां दर्ज करें</string>
+    <string name="validate_boys_girls">लड़कों और लड़कियों की संख्या दर्ज करें</string>
+    <string name="export_success">निर्यात सफल!</string>
+    <string name="export_failed">निर्यात विफल</string>
+    <string name="no_of_students">विद्यार्थियों की संख्या:\u0020</string>
+    <string name="incomplete_mapping_for_all">इस खेल को कोई छात्र नहीं सौंपा गया है</string>
+    <string name="complete_mapping_for_all">सभी छात्रों को खेल के लिए सौंपा गया है</string>
+    <string name="data_save_message_alert">कृपया सुनिश्चित करें कि किसी अन्य स्क्रीन पर स्विच करने से पहले डेटा सहेजा गया है।</string>
+    <string name="data_sync_message_alert">कृपया टेस्ट करने के पूरा होने के बाद डेटा सिंक हो गया है सुनिश्चित करें।</string>
+    <string name="data_save_message_sports_alert">It appears that \n\n a) Sports have not been mapped to students. OR \n b) You have not updated the students list of the school for the year.\n\nTo map sports to students, go to <b>Update TOP Sports</b> in the home screen.\n\n ​To update student list, please contact director/principal/HM for the students list. Help him/her to upload the student list from his/her active connect dashboard. \nDownload the format of the student: <a href="http://23.253.243.116:92/UploadStudentDataByTrainer.aspx">Download</a></string>
+    <string name="data_save_message_shape_alert">It appears that you have not updated the students list of the school for the year. \n \n Without the students list, you will not be able to give grades to students for the activity. \n \nPlease contact principal/headmaster for the students list. \n \nDownload the format of the student: <a href="http://23.253.243.116:92/UploadStudentDataByTrainer.aspx">Download</a></string>
+    <string name="term_expire">आपका शिविर समाप्त हो गया है, इस शिविर से कोई छात्र संबद्ध नहीं है।</string>
+    <string name="sync_start">सिंक्रनाइज़ेशन शुरू हुआ</string>
+    <string name="sync_end1">वरिष्ठ नागरिकों के लिए सिंक्रनाइज़ेशन समाप्त हो गया है</string>
+    <string name="sync_end2">जूनियर के लिए सिंक्रनाइज़ेशन समाप्त हो गया है</string>
+    <string name="sync_end3">जूनियर और वरिष्ठ नागरिकों के लिए सिंक्रनाइज़ेशन समाप्त हो गया है</string>
+    <string name="auth_sect_unallow">आप इस खंड तक पहुंचने के लिए अधिकृत नहीं हैं</string>
+    <string name="data_sync_all_message_alert">क्या आप वाकई छात्रों के सभी डेटा को सिंक करना चाहते हैं?</string>
+    <string name="data_export_message_alert">क्या आप सुनिश्चित हैं कि आप डेटा को सीएसवी फ़ाइल प्रारूप में संग्रहीत करना चाहते हैं और इसे मेल कर सकते हैं?</string>
+    <string name="learn_play_navigation_text">ऊपर दिए गए दो बटन (\"सीखें या खेलें\") पर क्लिक करके, आप <b>KHELO INDIA मुख्य अनुप्रयोग</b> पर पुनर्निर्देशित हो जाएंगे। यदि ऐप इंस्टॉल नहीं है, तो आप प्ले स्टोर पर पुनर्निर्देशित हो जाएंगे जहां आप ऐप डाउनलोड कर सकते हैं।</string>
+    <string name="logout_confirm_msg">क्या आप लॉग आउट करना चाहते हैं?</string>
+
+    <string name="fitness_assessment">फिटनेस का आकलन</string>
+    <string name="user_name">यूजर नेम</string>
+    <string name="pass_word">पासवर्ड</string>
+    <string name="login">लॉगिन</string>
+    <string name="forgot_password"> पासवर्ड भूल गए ?</string>
+    <string name="new_user">नया उपयोगकर्ता</string>
+    <string name="sign_up">नया अकाउंट बनायें</string>
+    <string name="hindi">हिंदी</string>
+    <string name="pref_lan">अपनी पसंदीदा भाषा का चयन करें</string>
+    <string name="next">आगे</string>
+    <string name="start_fitness">फिटनेस असेसमेंट</string>
+    <string name="learn">सीखें</string>
+    <string name="play">खेलें</string>
+
+
+    <!--rahul-->
+    <string name="app_update_message">ऐप अपडेट के लिए जाँच करें, कृपया प्रतीक्षा करें...</string>
+    <string name="validate_height">कृपया 40 और 250 के बीच ऊंचाई दर्ज करें</string>
+    <string name="validate_weight">कृपया 10 और 500 के बीच वजन दर्ज करें</string>
+    <string name = "start_timer"> कृपया टाइमर शुरू करें! </string>
+    <string name="time_not_completed_30sec">कृपया 30 सेकंड पूरा करने के लिए टाइमर की प्रतीक्षा करें!</string>
+    <string name="time_not_completed_60sec">कृपया 60 सेकंड पूरा करने के लिए टाइमर की प्रतीक्षा करें!</string>
+
+    <string name="fill_some_score">कृपया स्कोर भरें!</string>
+    <string name="no_schools_found">आपको कोई स्कूल नहीं सौंपा गया है। स्कूल में अपनी अस्सिटेंट आईडी को लिंक करने के लिए कृपया अपने प्रधानाचार्य से संपर्क करें schoolfitness.kheloindia.gov.in पर।</string>
+    <string name="update_state_city_msg">एप्लिकेशन का उपयोग जारी रखने के लिए कृपया प्रोफ़ाइल में अपने राज्य, शहर, जिला और ब्लॉक को अपडेट करें!</string>
+    <string name="update_state_profile_msg">एप्लिकेशन का उपयोग जारी रखने के लिए कृपया अपनी प्रोफ़ाइल अपडेट करें!</string>
+    <string name="select_label">चयन करें</string>
+
+    <string name="potential_talent_identification">(सामर्थ्‍य प्रतिभा पहचान)</string>
+    <string name="all_children">(सभी बच्‍चे)</string>
+    <string name="take_test">टेस्‍ट ले</string>
+    <string name="welcome_text">%s, आपका स्‍वागत है। आप</string>
+    <string name="school_name_text">%s में हैं</string>
+    <string name="records_to_export">निर्यात के रिकॉर्ड</string>
+    <string name="records_imported">आयात के रिकॉर्ड:</string>
+    <string name="last_synced_time">पिछला \"सिंक्‍ड टाइम\"</string>
+    <string name="admin_manual">प्रशासनिक मैन्‍युअल</string>
+    <string name="ecetificate">ई-सर्टिफिकेट डाउनलोड करें</string>
+    <string name="sop">एसओपी</string>
+    <string name="my_profile">मेरा प्रोफाइल</string>
+    <string name="only_incomplete">अर्द्ध सम्‍पन्‍न</string>
+    <string name="incomplete">अर्द्ध सम्‍पन्‍न</string>
+    <string name="complete">सम्‍पन्‍न</string>
+    <string name="view_report_label">रिपोर्ट देखें</string>
+    <string name="download">डाउनलोड</string>
+    <string name="download_report_for_self_use_sharing">अपने उपयोग/सांझा करने के लिए रिपोर्ट डाउनलोड करें।</string>
+    <string name="send_test_data_to_principal_for_manual_upload">मैन्‍युअल उपयोग के लिए, प्रधानाचार्य को टेस्‍ट डेटा भेजें।\  \</string>
+    <string name="email_to_principal">प्रधानाचार्य को ई-मेल</string>
+    <string name="data_upload_tooltip_text">कृपया अपने प्रधानाचार्य को सूचित करें कि वह https://schoolfitness.kheloindia.gov.in पर लॉगइन करने के बाद, आपके द्वारा सांझा की गई \"एक्‍सेल –फाइल\" को मैन्‍युअली अपलोड करने के लिए \"टेस्ट डेटा अपलोड\" मेन्‍यु खोलें ।</string>
+    <string name="change_language">भाषा बदलें</string>
+    <string name="count">गिनती</string>
+    <string name="start">शुरू करें</string>
+    <string name="scan">स्कैन</string>
+    <string name="save">सहेजें</string>
+    <string name="reset">रीसेट</string>
+    <string name="student_name">छात्र का नाम</string>
+    <string name="class_registration_number_label">कक्षा, पंजीकरण संख्या</string>
+    <string name="class_label">कक्षा</string>
+    <string name="enter_student_registration_no">छात्र पंजीकरण संख्या दर्ज करें</string>
+    <string name="code_here">यहाँ कोड दर्ज करें</string>
+    <string name="go">जाओ</string>
+    <string name="scan_student_qr_code">छात्र के QR कोड को स्कैन करें</string>
+    <string name="change_test">टेस्ट बदलें</string>
+    <string name="or">या</string>
+    <string name="please_enter_code">कृपया कोड दर्ज करें</string>
+    <string name="previous_score">पिछला स्कोर:</string>
+    <string name="age_gender_label">उम्र और लिंग</string>
+    <string name="height_cm">ऊंचाई (सेंटिमीटर)</string>
+    <string name="weight_kgs">वजन (किग्रा)</string>
+    <string name="fill_fields">कृपया सभी फ़ील्ड भरें</string>
+    <string name="net_score_label">नेट स्कोर:</string>
+    <string name="initial_position">प्रारंभिक स्थिति:</string>
+    <string name="meter">मीटर</string>
+    <string name="cms">सेमी।</string>
+    <string name="mm">मिमी।</string>
+    <string name="final_position">अंतिम स्थिति:</string>
+    <string name="select_no_of_lanes">गलियों का चयन करें</string>
+    <string name="minutes">मिनट</string>
+    <string name="seconds">सेकंड</string>
+    <string name="milli_seconds">मिली-सेकंड</string>
+    <string name="net_score">नेट स्कोर: %s</string>
+    <string name="class_registration_number">कक्षा: %s, %s</string>
+    <string name="score">स्कोर: %s</string>
+    <string name="enter_test_score_label">%s स्कोर दर्ज करें</string>
+    <string name="class_registration_no_without_class">%s, %s</string>
+    <string name="stop">रोकें</string>
+    <string name="split">विभाजित करें</string>
+    <string name="stop_timer">स्टॉप टाइमर</string>
+    <string name="pause">ठहरे</string>
+    <string name="starting_time_00">00:00:000</string>
+    <string name="skip">छोड़ें</string>
+    <string name="undo">पूर्ववत</string>
+    <string name="skipped">छोड़ दिया</string>
+    <string name="lane">गली %1$d</string>
+    <string name="save_confirm_msg">क्या आप वाकई डेटा को सहेजना चाहते हैं?</string>
+    <string name="test_score_saved_scorecard">%s के लिए %s के स्कोर को डेटाबेस में सहेजा गया है। स्कोर को फिर से देखने के लिए, आपको स्टूडेंट कार्ड को स्कैन करना होगा।</string>
+    <string name="already_test_taken_msg">%s पहले ही %s ले चुका है
+        \n\nपिछला स्कोर: %s
+        \n\nवर्तमान स्कोर: %s
+        \n\nक्या आप परीक्षा परिणाम अपडेट करना चाहते हैं?</string>
+    <string name="skip_lane_confirm_msg">क्या आप वाकई %s स्कोर (%s) को छोड़ना चाहते हैं?</string>
+    <string name="disqualified">अयोग्य</string>
+    <string name="name">नाम: %s</string>
+    <string name="trainer">ट्रेनर</string>
+    <string name="official_mail_id">आधिकारिक मेल आईडी</string>
+    <string name="gender">लिंग</string>
+    <string name="phone_no">फोन नंबर</string>
+    <string name="address_optional">पता (वैकल्पिक)</string>
+    <string name="state">राज्य</string>
+    <string name="district">जिला</string>
+    <string name="city">शहर</string>
+    <string name="block">ब्लॉक</string>
+    <string name="qualification">योग्यता</string>
+    <string name="t_shirt_size_inches_optional">टी-शर्ट का आकार (इंच) (वैकल्पिक)</string>
+    <string name="trouser_size_inches_optional">पतलून का आकार (इंच) (वैकल्पिक)</string>
+    <string name="personal_mail_id">व्यक्तिगत मेल आईडी (वैकल्पिक)</string>
+    <string name="whatsapp_no">व्हाट्सएप नं (वैकल्पिक)</string>
+    <string name="aadhar_no">आधार नं (वैकल्पिक)</string>
+    <string name="validate_your_name">कृपया कोई मान्य नाम दर्ज करें</string>
+    <string name="validate_email_id">कृपया मान्य ईमेल आईडी दर्ज करें</string>
+    <string name="validate_phone_number_not_empty">कृपया मान्य दस अंकों वाला फ़ोन नंबर दर्ज करें</string>
+    <string name="validate_qualification_not_empty">कृपया अपनी योग्यता दर्ज करें</string>
+    <string name="validate_terms_and_conditions">कृपया नियम और शर्तें स्वीकार करें</string>
+    <string name="permission_denied">अनुमति नहीं मिली!</string>
+    <string name="accept_permission">कृपया इस सुविधा का उपयोग करने के लिए %s की अनुमति दें। आप इसे सेटिंग्स-> ऐप्स-> खेलो इंडिया अस्सिटेंट-> अनुमतियों में अनुमति दे सकते हैं।</string>
+    <string name="unable_connect_server">सर्वर से संपर्क करने में असमर्थ!</string>
+    <string name="data_saved_offline">डेटा ऑफ़लाइन मोड में सफलतापूर्वक सहेजा गया है।</string>
+    <string name="cannnot_take_test">कृपया टेस्ट के लिए सिंक्रनाइज़ होने की प्रतीक्षा करें।</string>
+    <string name="deactivated_from_school_msg">आपको "'%s'" से निष्क्रिय कर दिया हैं। कृपया उपयुक्त विद्यालय का चयन करें।</string>
+    <string name="validate_state_not_empty">कृपया एक राज्य चुनें</string>
+    <string name="validate_string_not_empty">कृपया एक मान्य %s दर्ज करे</string>
+    <string name="validate_select_not_empty">कृपया एक मान्य %s चुनें</string>
+    <string name="deactivated">निष्क्रिय</string>
+    <string name="activated">सक्रिय</string>
+    <string name="please_wait_saving_data">कृपया प्रतीक्षा करें,जब तक हम डेटा सहेज रहे हैं।</string>
+    <string name="create_profile">प्रोफ़ाइल बनाए</string>
+    <string name="name_label">नाम</string>
+    <string name="email_id">ईमेल आईडी</string>
+    <string name="accepting_privacy_policy_txt">मैं नियम और शर्त और गोपनीयता नीति स्वीकार कर रहा/रही हूँ।</string>
+    <string name="have_you_attended_any_tot">क्या आपने किसी टीओटी में भाग लिया है?</string>
+    <string name="enter_the_code_recieved">प्राप्त कोड दर्ज करें:</string>
+    <string name="confirm_18_years_of_age_txt">मैं इस बात की पुष्टि करता हूं कि मैं 18 वर्ष से अधिक आयु का हूं और मेरे द्वारा दी गई जानकारी सही है।</string>
+    <string name="tot_code">टीओटी कोड</string>
+    <string name="sync_all">सभी को सिंक करें</string>
+    <string name="sync_new">नया सिंक करें</string>
+    <string name="refresh">रीफ्रेश</string>
+    <string name="yes">हाँ</string>
+    <string name="no">नहीं</string>
+    <string name="ok">ठीक</string>
+    <string name="fetching_all_students">कृपया प्रतीक्षा करें जब तक हम छात्रों के सभी डेटा ला रहे हैं।</string>
+    <string name="all_tests">सभी टेस्ट</string>
+    <string name="all_classes">सभी कक्षाएं</string>
+
+
+    <string name="export_email_body" formatted="false">Dear Principal/HM,
+        \n\n %s (%s) has sent an excel sheet (with fitness assessment scores from his mobile phone) for you to manually upload the data through the KheloIndia Portal.
+        \n\nHow to Upload:
+        \nTo upload the file, kindly do the following:
+        \n\n1. Download and Save the file into a folder (which you can refer later as well).
+        \n\"Do not edit the file\"
+        \n2. Log into schoolfitness.kheloindia.gov.in using Principal login and password
+        \n3. Go to \"Test Data Upload\" menu
+        \n4. Select the excel file(s) which you had downloaded from your email
+        \n5. Click on \"Upload\"
+        \n6. Wait for few seconds for file to get uploaded
+        \n7. You can refer to the files you had uploaded at any time.
+        \n\nWhen/How to View the Updated Test Scores:
+        \n\n1. The data will get reflected on Test Report by next day morning, after server processes the excel files after 2 AM mid-night and updates the scores.
+        \n2. Kindly note that the previous data of the student (if any) for a test score will be replaced with new score.
+        \n3. To view the Test Scores, log in to schoolfitness.kheloindia.gov.in using Principal login and password
+        \n4. Go to \"Report\" > \"Term Report\" > Select School > Select Term > View
+        \n5. Wait till it loads the grid (which is a summary of Complete and Incomplete status)
+        \n6. In the right most column of the grid, click \"View\"
+        \n7. Select any Class/Section and click on View to see the detailed report of that Class/Section
+        \n\nRegards,
+        \n
+        \nKheloIndia Support Team</string>
+    <string name="cancel">रद्द</string>
+    <string name="flexibility">लचीलापन</string>
+    <string name="enter_email_id">ईमेल आईडी दर्ज करें</string>
+    <string name="new_password">नया पासवर्ड</string>
+    <string name="confirm_password">पासवर्ड की पुष्टि कीजिये</string>
+    <string name="password_policy">पासवर्ड नीति</string>
+    <string name="password_min_six_chars">1. पासवर्ड न्यूनतम छह वर्ण का होना चाहिए।</string>
+    <string name="password_atleast_one_digit">2. पासवर्ड में कम से कम एक अंक होना चाहिए।</string>
+    <string name="password_least_one_special_char">3. पासवर्ड में कम से कम एक विशेष चरित्र होना चाहिए।</string>
+    <string name="reset_password">पासवर्ड रीसेट</string>
+    <string name="submit">सब्मिट</string>
+    <string name="please_confirm_password">कृपया पुष्टि पासवर्ड दर्ज करें</string>
+    <string name="password_not_match">पासवर्ड मेल नहीं खा रहा</string>
+    <string name="enter_valid_otp">कृपया एक वैध OTP दर्ज करें</string>
+    <string name="email_id_not_exists">ईमेल आईडी मौजूद नहीं है। कृपया मान्य ईमेल आईडी दर्ज करें।</string>
+    <string name="male">पुरुष</string>
+    <string name="female">महिला</string>
+    <string name="transgender">ट्रांसजेंडर</string>
+    <string name="no_data_found">कोई डेटा नहीं मिला</string>
+    <string name="female_short">स्त्री</string>
+    <string name="male_short">पु</string>
+    <string name="transgender_short">ट्रांस</string>
+    <string name="comp">सम्‍पन्‍न</string>
+    <string name="incompl">अर्द्ध सम्‍पन्‍न</string>
+    <string name="update">अपडेट</string>
+    <string name="camera">कैमरा</string>
+    <string name="storage">स्टोरेज</string>
+    <string name="audio_recording">ऑडियो रिकॉर्डिंग</string>
+    <string name="registration_status">पंजीकरण अवस्था</string>
+    <string name="registration_success">पंजीकरण सफल और आपका ट्रेनर-आईडी %s है</string>
+    <string name="creating_profile_msg">प्रोफ़ाइल बनाना कृपया प्रतीक्षा करें ...</string>
+    <string name="please_grant_permissions">कृपया परमिशन दें</string>
+    <string name="required_permission_msg">कार्य को करने के लिए कैमरा, रीड कॉन्टेक्ट और राइट एक्सटर्नल स्टोरेज अनुमतियां आवश्यक हैं।</string>
+    <string name="no_data_available_to_export">निर्यात करने के लिए कोई डेटा उपलब्ध नहीं है!</string>
+    <string name="sync_going_on">सिंक चल रहा है</string>
+    <string name="seconds_not_greater_than_60">सेकंड 60 से अधिक नहीं होने चाहिए।</string>
+    <string name="enter_otp">ओटीपी दर्ज करें</string>
+    <string name="resend_otp">ओटीपी पुनः भेजें</string>
+    <string name="enter_password_policy">कृपया नीचे दी गई नीति के अनुसार पासवर्ड दर्ज करें</string>
+    <string name="otp_sent">ओटीपी सफलतापूर्वक भेजा गया है। कृपया अपना ईमेल आईडी देखें!</string>
+    <string name="already_scanned_student">आपने इस छात्र को पहले ही स्कैन कर लिया है</string>
+    <string name="no_data_available_enable_net">डेटाबेस में कोई डेटा उपलब्ध नहीं है। कृपया सर्वर से सीधे डेटा प्राप्त करने के लिए अपने इंटरनेट को सक्षम करें।</string>
+    <string name="height_and_weight">ऊंचाई और वजन</string>
+    <string name="test_desc_label">परीक्षण का विवरfण:\ \</string>
+    <string name="purpose_label">उद्देश्य:\ \</string>
+    <string name="admin_sugg_label">प्रशासनिक सुझाव:\ \</string>
+    <string name="equipment_req">आवश्यक उपकरण:\ \</string>
+    <string name="scoring">स्कोरिंग:\ \</string>
+    <string name="weight_and_height_string">वजन: %1$.1f किग्रा और ऊंचाई: %2$.1f सेंटिमीटर</string>
+    <string name="na_string">लागु नहीं</string>
+    <string name="click_on_the_name_to_re_scan_the_student">छात्र को फिर से स्कैन करने के लिए नाम पर क्लिक करें</string>
+
+    <string name="validate_username_not_empty">कृपया मान्य नाम दर्ज करें</string>
+    <string name="please_enter_your_new_email_id">Please enter your new Email Id</string>
+    <string name="verify">Verify</string>
+    <string name="validate_gender_no_empty">Please select a gender!</string>
+    <string name="whatsapp_no_label">व्हाट्सएप नं</string>
+    <string name="aadhar_no_label">आधार नं</string>
+    <string name="select_organization">संगठन का चयन करें</string>
+    <string name="are_you_a_pet_athlete_or_coach">क्या आप पीईटी,एथलीट या कोच हैं</string>
+    <string name="sports_preferences_2_optional">खेल वरीयताएँ 2 (वैकल्पिक)</string>
+    <string name="sports_preferences_1">खेल वरीयताएँ 1</string>
+    <string name="sports_preferences_2">खेल वरीयताएँ 2</string>
+    <string-array name="months_array">
+        <item>All</item>
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+
+    <string-array name="dates_array">
+        <item>All</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+
+    </string-array>
+
+    <string-array name="dates_array_two">
+        <item>All</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+
+
+    </string-array>
+
+
+    <string-array name="dates_array_three">
+        <item>All</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+
+
+    </string-array>
+
+
+    <string-array name="dates_array_four">
+        <item>All</item>
+        <item>01</item>
+        <item>02</item>
+        <item>03</item>
+        <item>04</item>
+        <item>05</item>
+        <item>06</item>
+        <item>07</item>
+        <item>08</item>
+        <item>09</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+    </string-array>
+
+</resources>

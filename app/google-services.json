@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "556612395660",
+    "firebase_url": "https://khelo-india-e066d.firebaseio.com",
+    "project_id": "khelo-india-e066d",
+    "storage_bucket": "khelo-india-e066d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:556612395660:android:9350e03519e1c7217551a9",
+        "android_client_info": {
+          "package_name": "kheloindia.com.assessment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "556612395660-uhot18v6jq4jh2q3pjru6ec0jukjmem3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kheloindia.com.assessment",
+            "certificate_hash": "536284dda3d4f2afac2282b5f28da7aefa8ff393"
+          }
+        },
+        {
+          "client_id": "556612395660-2b71mpkd22secp84tda1673r4q62e9nl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgpHBlWdvjDAjtwr7O-G1M-AXc8aU-258"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "556612395660-2b71mpkd22secp84tda1673r4q62e9nl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

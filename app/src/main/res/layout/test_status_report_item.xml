@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/girl_blue_i"
+        android:background="@drawable/rectangle"
+        android:padding="7dp"
+        android:layout_weight="1"
+        android:id="@+id/gender_img"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="7"
+        android:background="@drawable/rectangle"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp">
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="7"-->
+<!--            android:background="@drawable/rectangle"-->
+<!--            android:padding="7dp"-->
+<!--            android:text="Kashvi Yadav"-->
+<!--            android:textSize="15sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:id="@+id/gender_txt"/>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="I-A"-->
+<!--            android:textSize="13sp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:id="@+id/current_class"-->
+<!--            android:paddingTop="1dp"-->
+<!--            />-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kashvi Yadav"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:id="@+id/gender_txt"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I-A"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:id="@+id/current_class"
+            android:paddingTop="1dp"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:background="@drawable/rectangle"
+        android:padding="5dp"
+        android:gravity="center"
+        android:text="6500478569"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:id="@+id/roll_no_txt"/>
+
+
+</LinearLayout>
+
+
+
+
+
