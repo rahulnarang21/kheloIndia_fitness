@@ -16,7 +16,7 @@ import kheloindia.com.assessment.util.AppConfig;
  * www.androidhive.info
  */
 public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
-    private static final String TAG = MyFirebaseInstanceIDService.class.getSimpleName();
+//    private static final String TAG = MyFirebaseInstanceIDService.class.getSimpleName();
 
 
 
@@ -43,7 +43,7 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 
     private void sendRegistrationToServer(final String token) {
         // sending gcm token to server
-        Log.e(TAG, "sendRegistrationToServer: " + token);
+//        Log.e(TAG, "sendRegistrationToServer: " + token);
     }
 
     private void storeRegIdInPref(String token) {

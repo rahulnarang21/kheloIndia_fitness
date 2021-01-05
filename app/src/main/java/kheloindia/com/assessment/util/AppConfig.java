@@ -15,8 +15,17 @@ public class AppConfig {
     public static final String LANGUAGE = "lan";
     public static final String SELECTED_LANGUAGE = "SelectedLanguage";
     public static final String GOT_ALL_TEST = "got_all_test";
-    public static final String BASE_URL = "https://fitnessdata.kheloindia.gov.in/Service1.svc/";
-    public static final String IMAGE_BASE_URL = "";
+//    public static final String BASE_URL = "https://fitnessdata.kheloindia.gov.in/Service1.svc/";
+    public static final String BASE_URL = "http://103.65.20.140:8082/Service1.svc/";
+    public static final String IMAGE_BASE_URL = "https://fitnessdata.kheloindia.gov.in/";
+//    public static final String IMAGE_BASE_URL = "http://103.65.20.140:8082/";
+    public static final String NSRS_BASE_URL = "http://34.199.234.160:64/api/";
+//    public static final String NSRS_BASE_URL = "http://www.nsrsapi.kheloindia.gov.in/api/";
+
+    // API URL
+    public static final String GET_COACH_LOGIN_TOKEN = NSRS_BASE_URL+"login/";
+    public static final String LOGIN_COACH_URL =  "NSRS/CoachDetail";
+
 
 
     // FONT PATH STRINGS
@@ -44,6 +53,7 @@ public class AppConfig {
     // LOGIN STRINGS
     public static final String TEST_COORDINATOR_NAME = "test_coordinator_name";
     public static final String TEST_COORDINATOR_PASSWORD = "test_coordinator_password";
+    public static final String PASSWORD = "password";
     public static final String IS_STUDENT_DETAILS_GET = "isStudentDetailGet";
     public static final String USER_ID = "userid";
     public static final String TEST_COORDINATOR_ID = "test_coordinator_id";
@@ -53,6 +63,14 @@ public class AppConfig {
     public static final String POSITION = "IsAthlete"; // 4: PET,5: Athlete,6 : Coach
     public static final String SPORTS_PREFS1 = "SportsPreference1";
     public static final String SPORTS_PREFS2 = "SportsPreference2";
+    public static final String USER_TYPE = "usertype";
+    public static final String USER_TYPE_SHARED_PREFS = "user_type";
+    public static final String USER_TYPE_PET = "4";
+    public static final String USER_TYPE_COACH = "13";
+    public static final String COACH_ADMIN_USERNAME = "Coach_Admin";
+    public static final String COACH_ADMIN_PASSWORD = "Coach@2020";
+
+
 
     // PROFILE STRINGS
     public static final String GENDER_ID = "gender";
@@ -65,6 +83,9 @@ public class AppConfig {
     public static final String IS_ATTACHED = "IsActive";
     public static final String CURRENT_SCHOOL_ID = "current_school_id";
 
+    // token strings
+    public static final String TOKEN = "devicetoken";
+    public static final String DEVICE_TYPE = "devicetype";
 
     // COORDINATOR STRINGS
     public static final String ADDRESS = "Address";
@@ -122,6 +143,8 @@ public static final String security_key = "IP84UTvzJKds1Jom";
     public static final String GET_SCHOOLS_URL = "getSchools/";
 
     public static final String VERIFY_EMAIL_URL = "EmailOTPVerify/";
+
+    public static final String UPDATE_TOKEN_URL = "UpdateUserDeviceToken/";
 
 
 }

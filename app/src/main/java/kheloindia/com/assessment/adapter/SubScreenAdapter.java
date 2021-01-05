@@ -20,6 +20,7 @@ import kheloindia.com.assessment.OpenScreenUrlActivity;
 import kheloindia.com.assessment.R;
 import kheloindia.com.assessment.ShowSubOfSubScreenActivity;
 import kheloindia.com.assessment.functions.Constant;
+import kheloindia.com.assessment.util.AppConfig;
 import kheloindia.com.assessment.util.DBManager;
 
 /**
@@ -71,7 +72,7 @@ public class SubScreenAdapter extends RecyclerView.Adapter<SubScreenAdapter.MyVi
                 Constant.SCREEN_NAME =   itemsList.get(pos).get("screen_name");
                 Constant.LOAD_URL = itemsList.get(pos).get("web_url");
                 if(Constant.LOAD_URL.length()>0){
-                    Constant.LOAD_URL = context.getString(R.string.image_base_url)+Constant.LOAD_URL+Constant.END_URL;
+                    Constant.LOAD_URL = AppConfig.IMAGE_BASE_URL +Constant.LOAD_URL+Constant.END_URL;
                     Log.e(TAG,"load url==> "+Constant.LOAD_URL);
 
                     //Toast.makeText(context,Constant.LOAD_URL,Toast.LENGTH_LONG).show();

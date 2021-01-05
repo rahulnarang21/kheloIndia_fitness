@@ -19,24 +19,25 @@ import retrofit2.Response;
 public class LoginRequest implements Callback<UserModel> {
 
     private ProgressDialogUtility progressDialogUtility;
-    private String userid, password, modified_date, imei, lat, lng;
+    private String userid, password, modified_date, imei, lat, lng,userType;
     private ResponseListener responseListener;
     private Activity activity;
 
-    public LoginRequest(Activity activity, String userid, String password, String modified_date,String imei, String lat, String lng, ResponseListener responseListener) {
+    public LoginRequest(Activity activity, String userid, String password, String modified_date,
+                        String imei, String lat, String lng, String userType,ResponseListener responseListener) {
         this.userid = userid;
         this.password = password;
         this.modified_date = modified_date;
         this.imei = imei;
         this.lat = lat;
         this.lng = lng;
+        this.userType = userType;
         this.responseListener = responseListener;
         this.activity = activity;
     }
 
     public void hitUserRequest() {
-        ApiRequest apiService =
-                ApiClient.getClient(activity).create(ApiRequest.class);
+        ApiRequest apiService = ApiClient.getClient(activity).create(ApiRequest.class);
         Call<UserModel> call = apiService.getUserDetails(getRequestBody());
         progressDialogUtility = new ProgressDialogUtility(activity);
         progressDialogUtility.showProgressDialog();
@@ -48,6 +49,8 @@ public class LoginRequest implements Callback<UserModel> {
         HashMap hashMap=new HashMap<String, Object>();
         Crypto crypto = new Crypto(AppConfig.security_key);
         hashMap.put("userid", crypto.encryptAsBase64(userid));
+//        if (userType.equals(AppConfig.USER_TYPE_COACH))
+//            hashMap.put("userid", userid);
         hashMap.put("password", crypto.encryptAsBase64(password));
 //        hashMap.put("userid", "9pjXJ4Y8kXgLA2meJrn5Pw==");
 //        hashMap.put("password", "9pjXJ4Y8kXgLA2meJrn5Pw==");
@@ -55,6 +58,7 @@ public class LoginRequest implements Callback<UserModel> {
         hashMap.put("Latitude",lat);
         hashMap.put("Longitude",lng);
         hashMap.put("ImeiNo","");
+        hashMap.put(AppConfig.USER_TYPE,userType);
         Log.e("LoginRequest","hashmap==> "+hashMap);
         return hashMap;
     }

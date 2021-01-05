@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso;
 import java.util.ArrayList;
 import java.util.HashMap;
 import kheloindia.com.assessment.R;
+import kheloindia.com.assessment.util.AppConfig;
 import kheloindia.com.assessment.util.ItemClickListener;
 
 /**
@@ -72,7 +73,7 @@ public class ScreenAdapter extends BaseAdapter {
         }
         viewHolder.test_txt.setText(screen.get(position).get("screen_name"));
 
-        String path = mContext.getResources().getString(R.string.image_base_url)+screen.get(position).get("icon_path")+screen.get(position).get("icon_image_name");
+        String path = AppConfig.IMAGE_BASE_URL +screen.get(position).get("icon_path")+screen.get(position).get("icon_image_name");
 
         Log.e(TAG,"path==> "+path);
         Picasso.get().load(path).into(viewHolder.test_img);

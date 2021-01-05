@@ -43,12 +43,12 @@
 
     <!--Current testing url-->
 
-<!--    <string name="base_url">http://103.65.20.140:89/Service1.svc/</string>-->
-<!--    <string name="image_base_url">http://103.65.20.140:89/</string>-->
+    <string name="base_url">http://103.65.20.140:8082/Service1.svc/</string>
+<!--    <string name="image_base_url">http://103.65.20.140:8082/</string>-->
 
     <!--current live url-->
-    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>
-    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>
+<!--    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>-->
+<!--    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>-->
 
     <!--live staging-->
     <!--<string name="base_url">http://192.168.1.117:85/Service1.svc/</string>-->
@@ -175,7 +175,7 @@
     <string name="update_state_profile_msg">एप्लिकेशन का उपयोग जारी रखने के लिए कृपया अपनी प्रोफ़ाइल अपडेट करें!</string>
     <string name="select_label">चयन करें</string>
 
-    <string name="potential_talent_identification">(सामर्थ्‍य प्रतिभा पहचान)</string>
+    <string name="potential_talent_identification">(पुनर्परीक्षण)</string>
     <string name="all_children">(सभी बच्‍चे)</string>
     <string name="take_test">टेस्‍ट ले</string>
     <string name="welcome_text">%s, आपका स्‍वागत है। आप</string>
@@ -387,6 +387,7 @@
     <string name="sports_preferences_2_optional">खेल वरीयताएँ 2 (वैकल्पिक)</string>
     <string name="sports_preferences_1">खेल वरीयताएँ 1</string>
     <string name="sports_preferences_2">खेल वरीयताएँ 2</string>
+    <string name="invalid_username_password">अमान्य उपयोगकर्ता नाम या पासवर्ड!</string>
     <string-array name="months_array">
         <item>All</item>
         <item>Jan</item>

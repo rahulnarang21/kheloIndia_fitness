@@ -18,8 +18,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.provider.Settings;
-import android.telephony.TelephonyManager;
 import android.text.InputType;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -28,6 +26,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,19 +45,25 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import kheloindia.com.assessment.model.CoachModel;
+import kheloindia.com.assessment.model.CoachTokenModel;
 import kheloindia.com.assessment.model.SchoolsMasterModel;
+import kheloindia.com.assessment.model.UpdateTokenModel;
 import kheloindia.com.assessment.model.UserModel;
 import kheloindia.com.assessment.service.LocationService;
 import kheloindia.com.assessment.util.AppConfig;
 import kheloindia.com.assessment.util.ConnectionDetector;
 import kheloindia.com.assessment.util.DBManager;
+import kheloindia.com.assessment.util.ProgressDialogUtility;
 import kheloindia.com.assessment.util.ResponseListener;
 
 import kheloindia.com.assessment.functions.Constant;
 import kheloindia.com.assessment.functions.GPSTracker1;
 import kheloindia.com.assessment.util.Utility;
+import kheloindia.com.assessment.webservice.KotlinRequests.CoachLoginRequest;
+import kheloindia.com.assessment.webservice.KotlinRequests.CoachTokenLoginRequest;
 import kheloindia.com.assessment.webservice.LoginRequest;
+import kheloindia.com.assessment.webservice.UpdateTokenRequest;
 
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener, ResponseListener {
@@ -83,6 +90,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private boolean isStudentDetailGet = false;
 
     private FirebaseAnalytics mFirebaseAnalytics;
+    String refreshedToken;
+
+    private RadioGroup assessor_parent_rg_grp;
+    private RadioButton assessor_rb_btn,parent_rb_btn;
+    private String user_type="4";
+    LinearLayout signupLayout;
+    GPSTracker1 gps;
+    ProgressDialogUtility progressDialogUtility;
 
 
     @Override
@@ -90,6 +105,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_screen);
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        assessor_parent_rg_grp = findViewById(R.id.trainer_parent_rg_grp);
+        assessor_rb_btn = findViewById(R.id.assessor_rb_btn);
+        parent_rb_btn = findViewById(R.id.parent_rb_btn);
+        signupLayout = findViewById(R.id.sign_up_layout);
 
 //        Bundle bundle = new Bundle();
 //        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "11");
@@ -119,12 +138,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         }
 
                         // Get new Instance ID token
-                        String refreshedToken = task.getResult().getToken();
+                        refreshedToken = task.getResult().getToken();
 
                         // Log and toast
                         //String msg = getString(, token);
                         Log.d("token", refreshedToken);
-                        Toast.makeText(LoginActivity.this, refreshedToken, Toast.LENGTH_SHORT).show();
+                     //   Toast.makeText(LoginActivity.this, refreshedToken, Toast.LENGTH_SHORT).show();
                         // Saving reg id to shared preferences
                         //storeRegIdInPref(refreshedToken);
 
@@ -151,8 +170,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void init() {
 
+        progressDialogUtility = new ProgressDialogUtility(this);
+        assessor_rb_btn.setChecked(true);
         sp = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         Constant.COORDINATOR_ID = "2";
+
+        gps = new GPSTracker1(getApplicationContext());
 
         //FirebaseAnalytics firebaseAnalytics = FirebaseAnalytics.getInstance(this);
 
@@ -204,6 +227,28 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
 
         isStudentDetailGet = sp.getBoolean(AppConfig.IS_STUDENT_DETAILS_GET, false);
+
+
+
+        assessor_parent_rg_grp.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group,  int checkedId) {
+                switch(checkedId) {
+                    case R.id.assessor_rb_btn:
+                        assessor_rb_btn.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.black));
+                        parent_rb_btn.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.pale_grey));
+                        user_type=AppConfig.USER_TYPE_PET;
+                        signupLayout.setVisibility(View.VISIBLE);
+                        break;
+                    case R.id.parent_rb_btn:
+                        assessor_rb_btn.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.pale_grey));
+                        parent_rb_btn.setTextColor(ContextCompat.getColor(LoginActivity.this, R.color.black));
+                        user_type=AppConfig.USER_TYPE_COACH;
+                        signupLayout.setVisibility(View.GONE);
+                        break;
+                }
+            }
+        });
 
         password_edt.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -258,6 +303,26 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
+    private String getMaxDate(){
+        ArrayList<Object> objectArrayList = DBManager.getInstance().getAllTableData(this, DBManager.TBL_LP_SCHOOLS_MASTER, "trainer_coordinator_id", Constant.TEST_COORDINATOR_ID, "", "");
+        String max_date = "";
+
+        try {
+            if (objectArrayList.size() > 0) {
+                max_date = DBManager.getInstance().getMaxDate(this, DBManager.TBL_LP_SCHOOLS_MASTER, "last_modified_on", Constant.CAMP_ID);
+
+            } else {
+                max_date = "";
+
+            }
+        } catch (Exception e) {
+            max_date = "";
+            e.printStackTrace();
+        }
+        Log.e("LoginActivity", "school max date=> " + max_date);
+        return max_date;
+    }
+
     public void getDataAndValidate() {
 
         username_txt = user_name_edt.getText().toString().trim();
@@ -275,28 +340,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 String id = sp.getString("test_coordinator_id", "");
                 Constant.TEST_COORDINATOR_ID = id;
-                ArrayList<Object> objectArrayList = DBManager.getInstance().getAllTableData(this, DBManager.TBL_LP_SCHOOLS_MASTER, "trainer_coordinator_id", Constant.TEST_COORDINATOR_ID, "", "");
 
-
-                String max_date = "";
-
-                try {
-                    if (objectArrayList.size() > 0) {
-                        max_date = DBManager.getInstance().getMaxDate(this, DBManager.TBL_LP_SCHOOLS_MASTER, "last_modified_on", Constant.CAMP_ID);
-
-                    } else {
-                        max_date = "";
-
-                    }
-                } catch (Exception e) {
-                    max_date = "";
-                    e.printStackTrace();
-                }
-
-                Log.e("LoginActivity", "school max date=> " + max_date);
-
-                GPSTracker1 gps;
-                gps = new GPSTracker1(getApplicationContext());
 
                 // code commented on 15-04-2020 because of android 10 crash
 //                TelephonyManager telephonyManager = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
@@ -309,8 +353,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 //                }
 
 
-                LoginRequest loginRequest = new LoginRequest(this, username_txt, password_txt, max_date, imei_string, "" + gps.getLatitude(), "" + gps.getLongitude(), this);
-                loginRequest.hitUserRequest();
+                if (user_type.equals(AppConfig.USER_TYPE_PET)) {
+                    LoginRequest loginRequest = new LoginRequest(this, username_txt, password_txt,
+                            getMaxDate(), imei_string, "" + gps.getLatitude(), "" + gps.getLongitude(), user_type, this);
+                    loginRequest.hitUserRequest();
+                }
+                else {
+                    progressDialogUtility.showProgressDialog();
+                    //new CoachLoginRequest(this,this,progressDialogUtility, username_txt,password_txt);
+                    new CoachTokenLoginRequest(this,this,progressDialogUtility);
+                }
 
                /* if(user_type.equalsIgnoreCase("4")){
                 UserRequest userRequest = new UserRequest(this, username_txt, password_txt,max_date,user_type, this);
@@ -430,6 +482,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         if (obj instanceof UserModel) {
 
+            UpdateTokenRequest updateTokenRequest = new UpdateTokenRequest(sp.getString(AppConfig.TEST_COORDINATOR_ID,""),
+                    refreshedToken, this,this);
+            updateTokenRequest.hitUserRequest();
+
             UserModel userModel = (UserModel) obj;
 
             if (userModel.getMessage().equalsIgnoreCase("success")) {
@@ -499,7 +555,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                 String user_type = "" + userModel.getResult().getUserTypeId();
 
-                if (user_type.equalsIgnoreCase("4")) {
+                if (user_type.equalsIgnoreCase("4") || user_type.equals("13")) {
 
                     SchoolsMasterModel model = new SchoolsMasterModel();
 
@@ -698,6 +754,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         }
 
+        else if (obj instanceof UpdateTokenModel){
+
+        }
+
 
        /* else if (obj instanceof StudentUserModel) {
             StudentUserModel UserModel = (StudentUserModel) obj;
@@ -762,7 +822,30 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         }*/
 
+        else if (obj instanceof CoachTokenModel) {
+            CoachTokenModel coachTokenModel = (CoachTokenModel) obj;
+            if (coachTokenModel.data != null && !coachTokenModel.data.equals("")){
+                new CoachLoginRequest(this,this,progressDialogUtility,
+                        coachTokenModel.data,username_txt,password_txt);
 
+            }
+            else {
+                Toast.makeText(ctx, getString(R.string.invalid_username_password), Toast.LENGTH_SHORT).show();
+            }
+        }
+        else if (obj instanceof CoachModel){
+            CoachModel coachModel = (CoachModel) obj;
+            if (coachModel.KITDUniqueId != null){
+                LoginRequest loginRequest = new LoginRequest(this,
+                        coachModel.KITDUniqueId, password_txt, getMaxDate(), imei_string, "" +
+                        gps.getLatitude(), "" + gps.getLongitude(), user_type,
+                        this);
+                loginRequest.hitUserRequest();
+            }
+            else {
+                Toast.makeText(ctx, getString(R.string.invalid_username_password), Toast.LENGTH_SHORT).show();
+            }
+        }
         else {
             Toast.makeText(this, R.string.server_down, Toast.LENGTH_SHORT).show();
         }

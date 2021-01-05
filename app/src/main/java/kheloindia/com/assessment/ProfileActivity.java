@@ -194,7 +194,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
 
         String imagePath = sp.getString("profile_pic_url","");
         if (imagePath.length()>1){
-            String path =getString(R.string.image_base_url).substring(0,getString(R.string.image_base_url).length()-1)+imagePath;
+            String path =AppConfig.IMAGE_BASE_URL.substring(0,AppConfig.IMAGE_BASE_URL.length()-1)+imagePath;
             Log.e(TAG,"path==> " + path);
             //Utility.rotateFabForward(this,select_image_fab);
             picasso .load(path).networkPolicy(NetworkPolicy.NO_CACHE).transform(new CircleTransformWhite()).into(profile_img, new com.squareup.picasso.Callback() {
@@ -1458,7 +1458,7 @@ public class ProfileActivity extends AppCompatActivity implements View.OnClickLi
                     ProfileImageModel responseBody = response.body();
                     Log.e("on responseee===> ","success "+responseBody.getIsSuccess());
                     Log.e("on responseee===> ","message "+responseBody.getMessage());
-                    String url=getString(R.string.image_base_url).substring(0,getString(R.string.image_base_url).length()-1)+responseBody.getMessage();
+                    String url= AppConfig.IMAGE_BASE_URL.substring(0,AppConfig.IMAGE_BASE_URL.length()-1)+responseBody.getMessage();
                     picasso.invalidate(url);
                     picasso.load(url).networkPolicy(NetworkPolicy.NO_CACHE).transform(new CircleTransformWhite()).into(profile_img, new com.squareup.picasso.Callback() {
                         @Override

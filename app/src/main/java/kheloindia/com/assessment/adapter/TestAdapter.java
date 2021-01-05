@@ -81,7 +81,7 @@ public class TestAdapter extends BaseAdapter{
             viewHolder.test_txt.setText(test.get(position).get("test_name"));
         else
             viewHolder.test_txt.setText(test.get(position).get(AppConfig.TEST_NAME_HINDI));
-        String path = mContext.getResources().getString(R.string.image_base_url)+test.get(position).get("test_img_path")+test.get(position).get("test_image");
+        String path = AppConfig.IMAGE_BASE_URL+test.get(position).get("test_img_path")+test.get(position).get("test_image");
 
         Log.e(TAG,"path==> "+path);
         Picasso.get().load(path).into(viewHolder.test_img);

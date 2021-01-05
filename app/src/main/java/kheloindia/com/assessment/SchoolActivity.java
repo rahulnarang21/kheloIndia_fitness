@@ -593,7 +593,9 @@ public class SchoolActivity extends AppCompatActivity implements ItemClickListen
             case R.id.refresh_btn:
                 if (connectionDetector.isConnectingToInternet()) {
                     progressDialogUtility.showProgressDialog();
-                    GetSchoolRequest getSchoolRequest = new GetSchoolRequest(this, sp.getString(AppConfig.TEST_COORDINATOR_ID, ""), this);
+                    GetSchoolRequest getSchoolRequest = new GetSchoolRequest(this,
+                            sp.getString(AppConfig.TEST_COORDINATOR_ID, ""),
+                            sp.getString(AppConfig.USER_TYPE_SHARED_PREFS,"4"),this);
                     getSchoolRequest.hitSchoolRequest();
                 }
                 break;

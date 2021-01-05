@@ -10,6 +10,11 @@ buildscript {
 apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
 //apply plugin: 'io.fabric'
 
 
@@ -32,9 +37,9 @@ android {
         applicationId "kheloindia.com.assessment"
         minSdkVersion 16
         targetSdkVersion 29
-        versionCode 26
+        versionCode 27
         multiDexEnabled true
-        versionName "1.0.25"
+        versionName "1.0.26"
         // db version  - 14
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
@@ -89,6 +94,8 @@ dependencies {
     androidTestImplementation('androidx.test.espresso:espresso-core:3.2.0', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.vectordrawable:vectordrawable-animated:1.1.0'
     implementation 'androidx.mediarouter:mediarouter:1.1.0'

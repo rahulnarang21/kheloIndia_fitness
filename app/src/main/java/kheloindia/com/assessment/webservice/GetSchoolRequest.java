@@ -22,12 +22,13 @@ import retrofit2.Response;
 public class GetSchoolRequest implements Callback<UserModel> {
 
     //private ProgressDialogUtility progressDialogUtility;
-    private String coordinatorId, password, modified_date, imei, lat, lng;
+    private String coordinatorId, user_type, modified_date, imei, lat, lng;
     private ResponseListener responseListener;
     private Activity activity;
 
-    public GetSchoolRequest(Activity activity, String coordinatorId, ResponseListener responseListener) {
+    public GetSchoolRequest(Activity activity, String coordinatorId, String user_type, ResponseListener responseListener) {
         this.coordinatorId = coordinatorId;
+        this.user_type = user_type;
         this.responseListener = responseListener;
         this.activity = activity;
     }
@@ -43,6 +44,7 @@ public class GetSchoolRequest implements Callback<UserModel> {
     private HashMap<String, Object> getRequestBody() {
         HashMap hashMap=new HashMap<String, Object>();
         hashMap.put(AppConfig.USER_ID, new Crypto(AppConfig.security_key).encryptAsBase64(coordinatorId));
+        hashMap.put(AppConfig.USER_TYPE, user_type);
         Log.e("GetSchoolRequest","hashmap==> "+hashMap);
         return hashMap;
     }

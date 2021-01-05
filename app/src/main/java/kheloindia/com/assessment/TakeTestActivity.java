@@ -334,7 +334,7 @@ public class TakeTestActivity extends AppCompatActivity implements View.OnClickL
         welcome_student_tv.setText(getString(R.string.welcome_text,sp.getString("username", "ABC")));
 
 
-        String path = getString(R.string.image_base_url) + Constant.SCHOOL_IMAGE_PATH;
+        String path = AppConfig.IMAGE_BASE_URL + Constant.SCHOOL_IMAGE_PATH;
 
         Picasso.get().load(path).into(school_big_i);
 
@@ -951,7 +951,7 @@ public class TakeTestActivity extends AppCompatActivity implements View.OnClickL
 //                GetSchoolRequest getSchoolRequest = new GetSchoolRequest(this, sp.getString(AppConfig.TEST_COORDINATOR_ID, ""), this);
 //                getSchoolRequest.hitSchoolRequest();
 //            }
-            GetSchoolRequest getSchoolRequest = new GetSchoolRequest(this, sp.getString(AppConfig.TEST_COORDINATOR_ID, ""), this);
+            GetSchoolRequest getSchoolRequest = new GetSchoolRequest(this, sp.getString(AppConfig.TEST_COORDINATOR_ID, ""), sp.getString(AppConfig.USER_TYPE_SHARED_PREFS,"4"), this);
             getSchoolRequest.hitSchoolRequest();
         } else {
 //            if (Utility.checkForSchoolDeActivated(this,schoolId)){
@@ -968,13 +968,13 @@ public class TakeTestActivity extends AppCompatActivity implements View.OnClickL
 //                    Utility.showStateCityUpdateDialog(this);
 //            }
             new SyncOnResume2().execute();
-            if (!AppConfig.IS_STATE_UPDATION_DIALOG_SHOWING &&
+            if (sp.getString(AppConfig.USER_TYPE_SHARED_PREFS,"").equals("4") && !AppConfig.IS_STATE_UPDATION_DIALOG_SHOWING &&
                     (sp.getInt(AppConfig.STATE_ID, 0) == 0 || sp.getString(AppConfig.CITY_NAME, "").equals("")
                             || sp.getString(AppConfig.DISTRICT_NAME, "").equals("")
-                            || sp.getString(AppConfig.BLOCK_NAME, "").equals(""))
+                            || sp.getString(AppConfig.BLOCK_NAME, "").equals("")
                     || sp.getInt(AppConfig.ORGANIZATION, 0)==0
                     || sp.getInt(AppConfig.POSITION, 0)==0
-                    || sp.getString(AppConfig.SPORTS_PREFS1, "").equals("")
+                    || sp.getString(AppConfig.SPORTS_PREFS1, "").equals(""))
             )
                 Utility.showStateCityUpdateDialog(this);
 
@@ -1938,13 +1938,15 @@ public class TakeTestActivity extends AppCompatActivity implements View.OnClickL
                                 new SyncOnResume1().execute();
                             }
 
-                            if (!AppConfig.IS_STATE_UPDATION_DIALOG_SHOWING && (sp.getInt(AppConfig.STATE_ID, 0) == 0
+                            if (sp.getString(AppConfig.USER_TYPE_SHARED_PREFS,"").equals("4") &&
+                                    !AppConfig.IS_STATE_UPDATION_DIALOG_SHOWING &&
+                                    (sp.getInt(AppConfig.STATE_ID, 0) == 0
                                     || sp.getString(AppConfig.CITY_NAME, "").equals("") ||
                                     sp.getString(AppConfig.DISTRICT_NAME, "").equals("") ||
-                                    sp.getString(AppConfig.BLOCK_NAME, "").equals("")) ||
+                                    sp.getString(AppConfig.BLOCK_NAME, "").equals("") ||
                             sp.getInt(AppConfig.ORGANIZATION, 0)==0
                                     || sp.getInt(AppConfig.POSITION, 0)==0
-                                    || sp.getString(AppConfig.SPORTS_PREFS1, "").equals(""))
+                                    || sp.getString(AppConfig.SPORTS_PREFS1, "").equals("")))
                                 Utility.showStateCityUpdateDialog(TakeTestActivity.this);
                         }
                     }
@@ -2063,6 +2065,8 @@ public class TakeTestActivity extends AppCompatActivity implements View.OnClickL
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.main_menu, menu);
+        if (sp.getString(AppConfig.USER_TYPE_SHARED_PREFS,"4").equals(AppConfig.USER_TYPE_COACH))
+            menu.findItem(R.id.profile_img).setVisible(false);
         // menu.findItem(R.id.profile_img).setIcon(Utility.resizeImage(this,R.drawable.person_black_i,100,100));
         return true;
     }
@@ -2079,9 +2083,9 @@ public class TakeTestActivity extends AppCompatActivity implements View.OnClickL
             case R.id.change_language:
                 startActivity(new Intent(TakeTestActivity.this, SelectLanguageActivty.class));
                 break;
-            case R.id.ecetificate:
-                Utility.openURLBrowser(this, AppConfig.ECERTIFICATE_URL);
-                break;
+//            case R.id.ecetificate:
+//                Utility.openURLBrowser(this, AppConfig.ECERTIFICATE_URL);
+//                break;
             case R.id.sop:
                 Utility.openURLBrowser(this, Utility.getAdminManualURL(this,AppConfig.SOP_URL));
                 break;

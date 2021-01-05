@@ -42,12 +42,12 @@
     <!--<string name="image_base_url">http://schoolfitness.kheloindia.gov.in:8080/</string>-->
 
     <!--Current testing url-->
-<!--    <string name="base_url">http://103.65.20.140:89/Service1.svc/</string>-->
-<!--    <string name="image_base_url">http://103.65.20.140:89/</string>-->
+    <string name="base_url">http://103.65.20.140:8082/Service1.svc/</string>
+<!--    <string name="image_base_url">http://103.65.20.140:8082/</string>-->
 
     <!--Current live url-->
-    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>
-    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>
+<!--    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>-->
+<!--    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>-->
 
     <!--live staging-->
     <!--<string name="base_url">http://192.168.1.117:85/Service1.svc/</string>-->
@@ -177,7 +177,7 @@
     <string name="time_not_completed_60sec">Please wait for the timer to complete 60 seconds!</string>
     <string name="logout">Logout</string>
     <string name="fill_some_score">Please fill out the score!</string>
-    <string name="potential_talent_identification">(Potential Talent Identification)</string>
+    <string name="potential_talent_identification">(Retest)</string>
     <string name="all_children">(All Children)</string>
     <string name="take_test">TAKE TEST</string>
     <string name="welcome_text">Welcome %s, You are at:</string>
@@ -386,6 +386,7 @@
     <string name="sports_preferences_2_optional">Sports Preferences 2 (Optional)</string>
     <string name="sports_preferences_1">Sports Preferences 1</string>
     <string name="sports_preferences_2">Sports Preferences 2</string>
+    <string name="invalid_username_password">Invalid Username or Password!</string>
 
 
     <string-array name="months_array">

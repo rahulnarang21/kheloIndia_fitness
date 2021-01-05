@@ -26,11 +26,11 @@
     </item>
 
 
-    <item
-        android:id="@+id/ecetificate"
-        app:showAsAction="never"
-        android:title="@string/ecetificate">
-    </item>
+<!--    <item-->
+<!--        android:id="@+id/ecetificate"-->
+<!--        app:showAsAction="never"-->
+<!--        android:title="@string/ecetificate">-->
+<!--    </item>-->
 
 
     <item

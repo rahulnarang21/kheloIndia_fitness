@@ -41,14 +41,14 @@
 
 
     <!--Current testing url-->
-<!--        <string name="base_url">http://103.65.20.140:89/Service1.svc/</string>-->
-<!--        <string name="image_base_url">http://103.65.20.140:89/</string>-->
+        <string name="base_url">http://103.65.20.140:8082/Service1.svc/</string>
+<!--        <string name="image_base_url">http://103.65.20.140:8082</string>-->
 
 
     <!--Current live url-->
 
-    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>
-    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>
+<!--    <string name="base_url"> https://fitnessdata.kheloindia.gov.in/Service1.svc/</string>-->
+<!--    <string name="image_base_url">https://fitnessdata.kheloindia.gov.in/</string>-->
 
     <string name="forgot_password_success">You have set the new password successfully</string>
     <string name="select_test">Select Test</string>
@@ -227,7 +227,7 @@
 
     <string name="data_upload_tooltip_text">Kindly intimate your Principal to log into schoolfitness.kheloindia.gov.in and go to \"Test Data Upload\" menu to manually upload the excel file you have shared</string>
     <string name="learn_play_navigation_text">By Clicking on any of the two buttons above (\"Learn or Play\"), you will redirected to the <b>KHELO INDIA Main Application.</b> If the app is not installed, you will be redirected to the play store where you can download the app.</string>
-    <string name="potential_talent_identification">(Potential Talent Identification)</string>
+    <string name="potential_talent_identification">(Retest)</string>
     <string name="all_children">(All Children)</string>
     <string name="take_test">TAKE TEST</string>
     <string name="welcome_text">Welcome %s,you are at:</string>
@@ -382,6 +382,7 @@
     <string name="sports_preferences_2_optional">Sports Preferences 2 (Optional)</string>
     <string name="sports_preferences_1">Sports Preferences 1</string>
     <string name="sports_preferences_2">Sports Preferences 2</string>
+    <string name="invalid_username_password">Invalid Username or Password!</string>
 
     <string-array name="months_array">
         <item>All</item>

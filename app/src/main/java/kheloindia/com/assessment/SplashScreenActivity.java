@@ -75,7 +75,7 @@ public class SplashScreenActivity extends AppCompatActivity {
 
 
                         Utility.changeLanguage(SplashScreenActivity.this,sp.getString(AppConfig.LANGUAGE,"en"));
-                        if(user_type.equals("4")) {
+                        if(user_type.equals(AppConfig.USER_TYPE_PET) || user_type.equals(AppConfig.USER_TYPE_COACH)) {
                             System.out.println("DEV 1"+isLogin);
                             if(isStudentDetailGet){
                                 System.out.println("DEV 2");

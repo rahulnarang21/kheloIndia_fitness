@@ -9,6 +9,8 @@ import kheloindia.com.assessment.model.ActiveModel;
 import kheloindia.com.assessment.model.ActivityStudentModel;
 import kheloindia.com.assessment.model.AttendancetrackModel;
 import kheloindia.com.assessment.model.CampTestModel;
+import kheloindia.com.assessment.model.CoachModel;
+import kheloindia.com.assessment.model.CoachTokenModel;
 import kheloindia.com.assessment.model.CreateProfileModel;
 import kheloindia.com.assessment.model.DartBoardHeaderModel;
 import kheloindia.com.assessment.model.DartBoardModel;
@@ -31,6 +33,7 @@ import kheloindia.com.assessment.model.TopSportsUpdateModel;
 import kheloindia.com.assessment.model.TopSportsUpdateSecondModel;
 import kheloindia.com.assessment.model.TransactionModel;
 import kheloindia.com.assessment.model.UpdateLocationModel;
+import kheloindia.com.assessment.model.UpdateTokenModel;
 import kheloindia.com.assessment.model.UserModel;
 import kheloindia.com.assessment.model.VerifyEmailOTPModel;
 import kheloindia.com.assessment.model.ViewActivityModel;
@@ -40,9 +43,14 @@ import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Field;
+import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
+import retrofit2.http.Path;
 
 
 public interface ApiRequest {
@@ -180,4 +188,17 @@ public interface ApiRequest {
 
     @POST(AppConfig.VERIFY_EMAIL_URL)
     Call<VerifyEmailOTPModel> verifyEmail(@Body HashMap<String, Object> hashMap);
+
+    @POST(AppConfig.UPDATE_TOKEN_URL)
+    Call<UpdateTokenModel> updateToken(@Body HashMap<String, Object> hashMap);
+
+    @FormUrlEncoded
+    @POST(AppConfig.GET_COACH_LOGIN_TOKEN)
+    Call<CoachTokenModel> getCoachLoginToken(@Field(AppConfig.USER_NAME) String username, @Field(AppConfig.PASSWORD) String password);
+
+    // Coach login
+    @FormUrlEncoded
+    @POST(AppConfig.LOGIN_COACH_URL)
+    Call<CoachModel> getCoachDetails(@Header("Authorization") String auth,@Field(AppConfig.USER_NAME) String username, @Field(AppConfig.PASSWORD) String password);
+
 }
